@@ -7,17 +7,44 @@
 //
 
 import UIKit
+import ZLSwipeableViewSwift
 
 class ViewController: UIViewController {
 
+    var cardImage: UIView?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        getCards()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func getCards(){
+        
+        let swipeableView = ZLSwipeableView(frame: CGRect(x: 0, y: 0, width: 300, height: 500))
+        
+        swipeableView.numberOfActiveView = UInt(1);
+        view.addSubview(swipeableView)
+        let service = playItemsService()
+        let cards = service.getAllItems()
+        
+        let card = cards[0]
+      //  cardImage.view.image = card.itemImage
+        
+        let imageView = UIImageView(image: card.itemImage)
+        cardImage?.addSubview(imageView)
+        
+        
+        
+        
+        
+        
+    
     }
 
 

@@ -12,6 +12,12 @@
 		9F00C78C1DD8A54700E982A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F00C78A1DD8A54700E982A1 /* Main.storyboard */; };
 		9F00C78E1DD8A54700E982A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F00C78D1DD8A54700E982A1 /* Assets.xcassets */; };
 		9F00C7911DD8A54700E982A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F00C78F1DD8A54700E982A1 /* LaunchScreen.storyboard */; };
+		9F00C7991DD8A6A600E982A1 /* PlayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00C7981DD8A6A600E982A1 /* PlayItem.swift */; };
+		9F00C79B1DD8A77E00E982A1 /* PlayItemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00C79A1DD8A77E00E982A1 /* PlayItemsService.swift */; };
+		9F52823F1DEB01890095CB6B /* ZLSwipeableViewSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F52823D1DEB00830095CB6B /* ZLSwipeableViewSwift.framework */; };
+		9F5282421DEB0D0D0095CB6B /* SwipeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5282411DEB0D0D0095CB6B /* SwipeableViewController.swift */; };
+		9FFEAFCB1DEC7D730056442D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEAFCA1DEC7D730056442D /* CardView.swift */; };
+		9FFEAFCD1DEC80B40056442D /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFEAFCC1DEC80B40056442D /* Cartography.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		9F00C78D1DD8A54700E982A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F00C7901DD8A54700E982A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F00C7921DD8A54700E982A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F00C7981DD8A6A600E982A1 /* PlayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayItem.swift; path = ../PlayItem.swift; sourceTree = "<group>"; };
+		9F00C79A1DD8A77E00E982A1 /* PlayItemsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayItemsService.swift; path = ../PlayItemsService.swift; sourceTree = "<group>"; };
+		9F52823D1DEB00830095CB6B /* ZLSwipeableViewSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZLSwipeableViewSwift.framework; path = Carthage/Build/iOS/ZLSwipeableViewSwift.framework; sourceTree = "<group>"; };
+		9F5282411DEB0D0D0095CB6B /* SwipeableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableViewController.swift; sourceTree = "<group>"; };
+		9FFEAFCA1DEC7D730056442D /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9FFEAFCC1DEC80B40056442D /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FFEAFCD1DEC80B40056442D /* Cartography.framework in Frameworks */,
+				9F52823F1DEB01890095CB6B /* ZLSwipeableViewSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +54,7 @@
 			children = (
 				9F00C7851DD8A54700E982A1 /* playphone */,
 				9F00C7841DD8A54700E982A1 /* Products */,
+				9F52823C1DEB00830095CB6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +69,27 @@
 		9F00C7851DD8A54700E982A1 /* playphone */ = {
 			isa = PBXGroup;
 			children = (
+				9F00C7981DD8A6A600E982A1 /* PlayItem.swift */,
+				9F00C79A1DD8A77E00E982A1 /* PlayItemsService.swift */,
 				9F00C7861DD8A54700E982A1 /* AppDelegate.swift */,
 				9F00C7881DD8A54700E982A1 /* ViewController.swift */,
 				9F00C78A1DD8A54700E982A1 /* Main.storyboard */,
 				9F00C78D1DD8A54700E982A1 /* Assets.xcassets */,
 				9F00C78F1DD8A54700E982A1 /* LaunchScreen.storyboard */,
 				9F00C7921DD8A54700E982A1 /* Info.plist */,
+				9F5282411DEB0D0D0095CB6B /* SwipeableViewController.swift */,
+				9FFEAFCA1DEC7D730056442D /* CardView.swift */,
 			);
 			path = playphone;
+			sourceTree = "<group>";
+		};
+		9F52823C1DEB00830095CB6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9FFEAFCC1DEC80B40056442D /* Cartography.framework */,
+				9F52823D1DEB00830095CB6B /* ZLSwipeableViewSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +102,7 @@
 				9F00C77F1DD8A54700E982A1 /* Sources */,
 				9F00C7801DD8A54700E982A1 /* Frameworks */,
 				9F00C7811DD8A54700E982A1 /* Resources */,
+				9F5282401DEB01A60095CB6B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,12 +161,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9F5282401DEB01A60095CB6B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ZLSwipeableViewSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Cartography.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F00C77F1DD8A54700E982A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9F00C7891DD8A54700E982A1 /* ViewController.swift in Sources */,
+				9F00C7991DD8A6A600E982A1 /* PlayItem.swift in Sources */,
+				9F00C79B1DD8A77E00E982A1 /* PlayItemsService.swift in Sources */,
+				9F5282421DEB0D0D0095CB6B /* SwipeableViewController.swift in Sources */,
+				9FFEAFCB1DEC7D730056442D /* CardView.swift in Sources */,
 				9F00C7871DD8A54700E982A1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +313,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9P9KJHA58S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = playphone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.playphone.playphone;
@@ -275,6 +330,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9P9KJHA58S;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = playphone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.playphone.playphone;
@@ -302,6 +361,7 @@
 				9F00C7971DD8A54700E982A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

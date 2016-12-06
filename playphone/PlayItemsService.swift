@@ -7,3 +7,23 @@
 //
 
 import Foundation
+import UIKit
+
+
+struct playItemsService
+{
+
+    func getAllItems() -> Array<playItem> {
+        
+        let itemImage = UIImage(named: "key.png")
+        
+        let item = playItem(id: 12, name: "Key", image: itemImage!)
+        
+        
+        var itemArray = [playItem]()
+
+        itemArray.append(item)
+        
+        return itemArray
+    }
+}
