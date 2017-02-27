@@ -8,31 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		9F00C7871DD8A54700E982A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00C7861DD8A54700E982A1 /* AppDelegate.swift */; };
-		9F00C7891DD8A54700E982A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00C7881DD8A54700E982A1 /* ViewController.swift */; };
+		9F00C7891DD8A54700E982A1 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00C7881DD8A54700E982A1 /* CardViewController.swift */; };
 		9F00C78C1DD8A54700E982A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F00C78A1DD8A54700E982A1 /* Main.storyboard */; };
 		9F00C78E1DD8A54700E982A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F00C78D1DD8A54700E982A1 /* Assets.xcassets */; };
 		9F00C7911DD8A54700E982A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F00C78F1DD8A54700E982A1 /* LaunchScreen.storyboard */; };
 		9F00C7991DD8A6A600E982A1 /* PlayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00C7981DD8A6A600E982A1 /* PlayItem.swift */; };
 		9F00C79B1DD8A77E00E982A1 /* PlayItemsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F00C79A1DD8A77E00E982A1 /* PlayItemsService.swift */; };
+		9F2D238F1E64A3DE00864FB9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F2D238E1E64A3DE00864FB9 /* MainViewController.swift */; };
 		9F52823F1DEB01890095CB6B /* ZLSwipeableViewSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F52823D1DEB00830095CB6B /* ZLSwipeableViewSwift.framework */; };
-		9F5282421DEB0D0D0095CB6B /* SwipeableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5282411DEB0D0D0095CB6B /* SwipeableViewController.swift */; };
-		9FFEAFCB1DEC7D730056442D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFEAFCA1DEC7D730056442D /* CardView.swift */; };
+		9FC09C8D1E3E2A9B0059BAF0 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC09C8C1E3E2A9B0059BAF0 /* Direction.swift */; };
+		9FC09C8F1E3E2AC20059BAF0 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC09C8E1E3E2AC20059BAF0 /* Scheduler.swift */; };
+		9FC09C911E3E2AE80059BAF0 /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC09C901E3E2AE80059BAF0 /* ViewManager.swift */; };
+		9FC09C931E3E2B1D0059BAF0 /* ZLSwipeableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC09C921E3E2B1D0059BAF0 /* ZLSwipeableViews.swift */; };
+		9FC09C951E3E2B500059BAF0 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC09C941E3E2B500059BAF0 /* CardView.swift */; };
 		9FFEAFCD1DEC80B40056442D /* Cartography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FFEAFCC1DEC80B40056442D /* Cartography.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9F00C7831DD8A54700E982A1 /* playphone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = playphone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F00C7861DD8A54700E982A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F00C7881DD8A54700E982A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F00C7881DD8A54700E982A1 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		9F00C78B1DD8A54700E982A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F00C78D1DD8A54700E982A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F00C7901DD8A54700E982A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F00C7921DD8A54700E982A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F00C7981DD8A6A600E982A1 /* PlayItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayItem.swift; path = ../PlayItem.swift; sourceTree = "<group>"; };
 		9F00C79A1DD8A77E00E982A1 /* PlayItemsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayItemsService.swift; path = ../PlayItemsService.swift; sourceTree = "<group>"; };
+		9F2D238E1E64A3DE00864FB9 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9F52823D1DEB00830095CB6B /* ZLSwipeableViewSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZLSwipeableViewSwift.framework; path = Carthage/Build/iOS/ZLSwipeableViewSwift.framework; sourceTree = "<group>"; };
-		9F5282411DEB0D0D0095CB6B /* SwipeableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeableViewController.swift; sourceTree = "<group>"; };
-		9FFEAFCA1DEC7D730056442D /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9FC09C8C1E3E2A9B0059BAF0 /* Direction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		9FC09C8E1E3E2AC20059BAF0 /* Scheduler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
+		9FC09C901E3E2AE80059BAF0 /* ViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
+		9FC09C921E3E2B1D0059BAF0 /* ZLSwipeableViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLSwipeableViews.swift; sourceTree = "<group>"; };
+		9FC09C941E3E2B500059BAF0 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9FFEAFCC1DEC80B40056442D /* Cartography.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cartography.framework; path = Carthage/Build/iOS/Cartography.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,16 +77,20 @@
 		9F00C7851DD8A54700E982A1 /* playphone */ = {
 			isa = PBXGroup;
 			children = (
+				9FC09C921E3E2B1D0059BAF0 /* ZLSwipeableViews.swift */,
+				9FC09C901E3E2AE80059BAF0 /* ViewManager.swift */,
+				9FC09C8E1E3E2AC20059BAF0 /* Scheduler.swift */,
+				9FC09C8C1E3E2A9B0059BAF0 /* Direction.swift */,
 				9F00C7981DD8A6A600E982A1 /* PlayItem.swift */,
 				9F00C79A1DD8A77E00E982A1 /* PlayItemsService.swift */,
+				9F2D238E1E64A3DE00864FB9 /* MainViewController.swift */,
 				9F00C7861DD8A54700E982A1 /* AppDelegate.swift */,
-				9F00C7881DD8A54700E982A1 /* ViewController.swift */,
+				9F00C7881DD8A54700E982A1 /* CardViewController.swift */,
 				9F00C78A1DD8A54700E982A1 /* Main.storyboard */,
 				9F00C78D1DD8A54700E982A1 /* Assets.xcassets */,
 				9F00C78F1DD8A54700E982A1 /* LaunchScreen.storyboard */,
 				9F00C7921DD8A54700E982A1 /* Info.plist */,
-				9F5282411DEB0D0D0095CB6B /* SwipeableViewController.swift */,
-				9FFEAFCA1DEC7D730056442D /* CardView.swift */,
+				9FC09C941E3E2B500059BAF0 /* CardView.swift */,
 			);
 			path = playphone;
 			sourceTree = "<group>";
@@ -184,12 +196,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F00C7891DD8A54700E982A1 /* ViewController.swift in Sources */,
+				9F00C7891DD8A54700E982A1 /* CardViewController.swift in Sources */,
+				9FC09C951E3E2B500059BAF0 /* CardView.swift in Sources */,
+				9FC09C931E3E2B1D0059BAF0 /* ZLSwipeableViews.swift in Sources */,
 				9F00C7991DD8A6A600E982A1 /* PlayItem.swift in Sources */,
 				9F00C79B1DD8A77E00E982A1 /* PlayItemsService.swift in Sources */,
-				9F5282421DEB0D0D0095CB6B /* SwipeableViewController.swift in Sources */,
-				9FFEAFCB1DEC7D730056442D /* CardView.swift in Sources */,
+				9FC09C8F1E3E2AC20059BAF0 /* Scheduler.swift in Sources */,
+				9FC09C8D1E3E2A9B0059BAF0 /* Direction.swift in Sources */,
+				9FC09C911E3E2AE80059BAF0 /* ViewManager.swift in Sources */,
 				9F00C7871DD8A54700E982A1 /* AppDelegate.swift in Sources */,
+				9F2D238F1E64A3DE00864FB9 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +337,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.playphone.playphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -338,7 +354,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.playphone.playphone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};

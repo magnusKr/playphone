@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2ec-d3-Dzh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Swipeable View Controller-->
+        <!--Card View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SwipeableViewController" customModule="playphone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="playphone" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,18 +21,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fL3-7c-rIg">
-                                <frame key="frameInset" minX="67" minY="269" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.2666666667" green="0.64705882349999999" blue="0.75686274509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.2666666667" green="0.64705882349999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2188" y="-20"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="4C3-OE-uFU">
+            <objects>
+                <viewController id="2ec-d3-Dzh" customClass="MainViewController" customModule="playphone" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jwv-1N-6b8"/>
+                        <viewControllerLayoutGuide type="bottom" id="cjs-Xr-Fda"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1jw-Pl-M1t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHW-Nx-a65">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="embed" id="DZs-uF-uCG"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wY0-BB-Pyw">
+                                <rect key="frame" x="164" y="318" width="47" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startPressed:" destination="2ec-d3-Dzh" eventType="touchUpInside" id="M0j-Zz-Szw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbJ-O6-Ib8">
+                                <rect key="frame" x="116" y="160" width="143" height="102"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="82"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wY0-BB-Pyw" firstAttribute="centerX" secondItem="1jw-Pl-M1t" secondAttribute="centerX" id="3Wm-Em-PEP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dbJ-O6-Ib8" secondAttribute="trailing" constant="100" id="Gn0-vJ-4OK"/>
+                            <constraint firstItem="dbJ-O6-Ib8" firstAttribute="top" secondItem="Jwv-1N-6b8" secondAttribute="bottom" constant="140" id="I46-EF-IbA"/>
+                            <constraint firstItem="wY0-BB-Pyw" firstAttribute="centerY" secondItem="1jw-Pl-M1t" secondAttribute="centerY" id="QHi-VN-p02"/>
+                            <constraint firstAttribute="trailing" secondItem="IHW-Nx-a65" secondAttribute="trailing" id="THM-My-oJQ"/>
+                            <constraint firstItem="IHW-Nx-a65" firstAttribute="top" secondItem="1jw-Pl-M1t" secondAttribute="top" id="Wjl-YN-8LP"/>
+                            <constraint firstItem="dbJ-O6-Ib8" firstAttribute="leading" secondItem="1jw-Pl-M1t" secondAttribute="leadingMargin" constant="100" id="ccP-UP-Mdv"/>
+                            <constraint firstItem="IHW-Nx-a65" firstAttribute="leading" secondItem="1jw-Pl-M1t" secondAttribute="leading" id="hDb-1e-46k"/>
+                            <constraint firstItem="cjs-Xr-Fda" firstAttribute="top" secondItem="IHW-Nx-a65" secondAttribute="bottom" id="xH3-YY-Xx5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countDownLabel" destination="dbJ-O6-Ib8" id="4V1-4Q-rSg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ds4-Nw-H97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>
