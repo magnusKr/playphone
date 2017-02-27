@@ -2,8 +2,8 @@
 //  CardView.swift
 //  playphone
 //
-//  Created by Magnus Kraepelien on 28/11/16.
-//  Copyright © 2016 playphone. All rights reserved.
+//  Created by Magnus Kraepelien on 29/01/17.
+//  Copyright © 2017 playphone. All rights reserved.
 //
 
 import UIKit
@@ -22,7 +22,7 @@ class CardView: UIView {
     
     func setup() {
         // Shadow
-        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowColor = UIColor.blue.cgColor
         layer.shadowOpacity = 0.25
         layer.shadowOffset = CGSize(width: 0, height: 1.5)
         layer.shadowRadius = 4.0
@@ -33,3 +33,4 @@ class CardView: UIView {
         layer.cornerRadius = 10.0;
     }
 }
+

@@ -1,35 +1,32 @@
 //
-//  SwipeableViewController.swift
+//  ViewController.swift
 //  playphone
 //
-//  Created by Magnus Kraepelien on 27/11/16.
+//  Created by Magnus Kraepelien on 13/11/16.
 //  Copyright © 2016 playphone. All rights reserved.
 //
+
 import UIKit
-import ZLSwipeableViewSwift
 import Cartography
 
-//import Cartography
-
-class SwipeableViewController: UIViewController {
+class CardViewController: UIViewController {
     
     var swipeableView: ZLSwipeableView!
     
-    var colors:[UIColor] = [UIColor.black, UIColor.blue, UIColor.brown, UIColor.cyan, UIColor.green]
-    
+    var colors = [UIColor.blue, UIColor.black, UIColor.red, UIColor.brown, UIColor.cyan]
     var colorIndex = 0
     var loadCardsFromXib = false
     
-//    var reloadBarButtonItem: UIBarButtonItem!
-//    // var reloadBarButtonItem = UIBarButtonItem(barButtonSystemItem: "Reload", target: .Plain) { item in }
-//    var leftBarButtonItem: UIBarButtonItem!
-//    // var leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: "←", target: .Plain) { item in }
-//    var upBarButtonItem: UIBarButtonItem!
-//    // var upBarButtonItem = UIBarButtonItem(barButtonSystemItem: "↑", target: .Plain) { item in }
-//    var rightBarButtonItem: UIBarButtonItem!
-//    // var rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: "→", target: .Plain) { item in }
-//    var downBarButtonItem:UIBarButtonItem!
-//    // var downBarButtonItem = UIBarButtonItem(barButtonSystemItem: "↓", target: .Plain) { item in }
+    var reloadBarButtonItem: UIBarButtonItem!
+    // var reloadBarButtonItem = UIBarButtonItem(barButtonSystemItem: "Reload", target: .Plain) { item in }
+    var leftBarButtonItem: UIBarButtonItem!
+    // var leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: "←", target: .Plain) { item in }
+    var upBarButtonItem: UIBarButtonItem!
+    // var upBarButtonItem = UIBarButtonItem(barButtonSystemItem: "↑", target: .Plain) { item in }
+    var rightBarButtonItem: UIBarButtonItem!
+    // var rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: "→", target: .Plain) { item in }
+    var downBarButtonItem:UIBarButtonItem!
+    // var downBarButtonItem = UIBarButtonItem(barButtonSystemItem: "↓", target: .Plain) { item in }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -40,24 +37,21 @@ class SwipeableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //navigationController?.setToolbarHidden(false, animated: false)
-        view.backgroundColor = UIColor.white
+        navigationController?.setToolbarHidden(false, animated: false)
+        
         view.clipsToBounds = true
         
+        // reloadBarButtonItem = UIBarButtonItem(title: "Reload", style: .plain, target: self, action: #selector(reloadButtonAction))
+        leftBarButtonItem = UIBarButtonItem(title: "←", style: .plain, target: self, action: #selector(leftButtonAction))
+        // upBarButtonItem = UIBarButtonItem(title: "↑", style: .plain, target: self, action: #selector(upButtonAction))
+        rightBarButtonItem = UIBarButtonItem(title: "→", style: .plain, target: self, action: #selector(rightButtonAction))
+        //  downBarButtonItem = UIBarButtonItem(title: "↓", style: .plain, target: self, action: #selector(downButtonAction))
         
- 
+        let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-//        reloadBarButtonItem = UIBarButtonItem(title: "Reload", style: .plain, target: self, action: #selector(reloadButtonAction))
-//        leftBarButtonItem = UIBarButtonItem(title: "←", style: .plain, target: self, action: #selector(leftButtonAction))
-//        upBarButtonItem = UIBarButtonItem(title: "↑", style: .plain, target: self, action: #selector(upButtonAction))
-//        rightBarButtonItem = UIBarButtonItem(title: "→", style: .plain, target: self, action: #selector(rightButtonAction))
-//        downBarButtonItem = UIBarButtonItem(title: "↓", style: .plain, target: self, action: #selector(downButtonAction))
-//        
-//        let fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
-//        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-//        let items = [fixedSpace, reloadBarButtonItem!, flexibleSpace, leftBarButtonItem!, flexibleSpace, upBarButtonItem!, flexibleSpace, rightBarButtonItem!, flexibleSpace, downBarButtonItem!, fixedSpace]
-//        toolbarItems = items
+        let items = [fixedSpace, leftBarButtonItem!, flexibleSpace, rightBarButtonItem!, fixedSpace]
+        toolbarItems = items
         
         swipeableView = ZLSwipeableView()
         view.addSubview(swipeableView)
@@ -120,6 +114,9 @@ class SwipeableViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func startGame(_ sender: Any) {
+        self.rightButtonAction()
+    }
     func leftButtonAction() {
         self.swipeableView.swipeTopView(inDirection: .Left)
     }
@@ -143,17 +140,9 @@ class SwipeableViewController: UIViewController {
         }
         
         let cardView = CardView(frame: swipeableView.bounds)
-      //  cardView.backgroundColor = colorForName(colors[colorIndex])
-        cardView.backgroundColor = colors[colorIndex]
+        cardView.backgroundColor = colorForName(colors[colorIndex])
         colorIndex += 1
         
-        let service = playItemsService()
-        let cards = service.getAllItems()
-        
-        let card = cards[0]
-        let imageView = UIImageView(image: card.itemImage)
-        cardView.addSubview(imageView)
-
         if loadCardsFromXib {
             let contentView = Bundle.main.loadNibNamed("CardContentView", owner: self, options: nil)?.first! as! UIView
             contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -178,13 +167,10 @@ class SwipeableViewController: UIViewController {
         return cardView
     }
     
-//    func colorForName(_ name: String) -> UIColor {
-//        let sanitizedName = name.replacingOccurrences(of: " ", with: "")
-//        let selector = "flat\(sanitizedName)Color"
-//        return UIColor.perform(Selector(selector)).takeUnretainedValue() as! UIColor
-//        return UIColor.black
-//    }
+    func colorForName(_ name: UIColor) -> UIColor {
+      //  let sanitizedName = name.replacingOccurrences(of: " ", with: "")
+      //  let selector = "flat\(sanitizedName)Color"
+        let color = name
+        return color
+    }
 }
-
-
-
